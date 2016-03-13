@@ -139,77 +139,114 @@
 		Sketch 也能管理文件版本 － Sketch Git</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<p>本文拓展至 @StevenYUAN 的《设计师的版本控制-Sketch git插件的使用案例》，对文章中的一些细节进行了补充。也感谢在使用过程中@ 热爱生活和学习的小奥 &amp; @ JustinFincher 的指导.<br/>
-我们比较熟知的都是代码的版本管理，但是我们 Sketch 里的设计稿一样也是可以管理的. 而 Sketch Git 就是一款专门版本控制的插件，也是众多现有的git插件中持续维护情况最好功能最完善的，项目在github开源，各位可以持续关注.<br/>
-我相信愿意看本文的各位都是对 git 有一定的了解，我就不具体介绍 git 是什么了，直接开始插件的安装和使用：<br/>
-1.相关准备<br/>
-首先，你需要在你的任意 Mac 上安装在 Sketch 官网安装的 Sketch.<br/>
-第二，下载好 Sketch Git 插件.<br/>
-第三，下载好最新版的 Git .<br/>
-2.Sketch Git &amp; Git 的安装<br/>
-把前面下载好的 git-sketch-plugin-master.zip 的压缩包解压后点击 Git.sketchplugin 进行安装.</p>
+			<blockquote>
+<p>本文拓展至 @StevenYUAN 的《设计师的版本控制-Sketch git插件的使用案例》，对文章中的一些细节进行了补充。也感谢在使用过程中@ 热爱生活和学习的小奥 &amp; @ JustinFincher 的指导.</p>
+</blockquote>
 
-<p>git-sketch-plugin-master<br/>
-安装成功后，显示如下：</p>
+<p>我们比较熟知的都是代码的版本管理，但是我们 <strong>Sketch</strong> 里的设计稿一样也是可以管理的. 而 <strong>Sketch Git</strong> 就是一款专门版本控制的插件，也是众多现有的git插件中持续维护情况最好功能最完善的，项目在 <strong>github</strong> 开源，各位可以持续关注.</p>
 
-<p>Install plugin successfully<br/>
-点击安装之前下载好的 git-2.6.4-intel-universal-mavericks.dmg，等待片刻安装完成.</p>
+<p>我相信愿意看本文的各位都是对 <strong>Git</strong> 有一定的了解，我就不具体介绍 <strong>Git</strong> 是什么了，直接开始插件的安装和使用：</p>
 
-<p>Git install<br/>
-3.Gitlab 注册 &amp; SSH Key 获取<br/>
-登录 Gitlab 的官网注册并登录.</p>
+<h3 id="toc_0">1. 相关准备</h3>
 
-<p>Gitlab.com<br/>
-打开你 Mac 的终端</p>
+<ul>
+<li>首先，你需要在你的任意 Mac 上安装在 <strong>Sketch</strong> 官网安装的 Sketch.</li>
+<li>第二，下载好 <strong>Sketch Git</strong> 插件.<br/></li>
+<li>第三，下载好最新版的 <strong>Git</strong> .</li>
+</ul>
 
-<p>在终端中输入 ssh-keygen -t rsa -C “$your_email”<br/>
-此处需要在 your_email 处填写你自己邮箱，显示 Enter file in which to save the key 后直接按回车，输入你的密码后，就会显示如下界面</p>
+<h3 id="toc_1">2. Sketch Git &amp; Git 的安装</h3>
 
-<p>然后在终端中输入 pbcopy &lt; ~/.ssh/id_rsa.pub<br/>
-你的 SSH Key 就已经复制在剪贴板上了，然后打开你刚才登陆的 Gitlab ，点击左侧的 Profile Setting - SSH Keys，将你复制的 SSH Key 粘贴进去添加即可.</p>
+<ul>
+<li>把前面下载好的 <strong>git-sketch-plugin-master.zip</strong> 的压缩包解压后点击 <strong>Git.sketchplugin</strong> 进行安装.
+<img src="https://cdn-images-1.medium.com/max/1600/1*Zi9KXZgmlvDAmVc8lNMWHQ.jpeg" alt="git-sketch-plugin-master"/></li>
+<li>git-sketch-plugin-master 安装成功后，显示如下：
+<img src="https://cdn-images-1.medium.com/max/1600/1*QsJrH0Tl8jbYItRBQLWwEg.jpeg" alt="Install plugin successfully"/></li>
+<li>点击安装之前下载好的 <strong>git-2.6.4-intel-universal-mavericks.dmg</strong>，等待片刻安装完成.
+<img src="https://cdn-images-1.medium.com/max/1600/1*Rztevepr55putV5Lf5w77w.jpeg" alt="Git install"/></li>
+</ul>
 
-<p>SSH Keys<br/>
-4.SketchTool 的安装<br/>
-这一步上我卡住了很久，因为我是按照官网的这个方法安装，一直没有安装成功.</p>
+<h3 id="toc_2">3. Gitlab 注册 &amp; SSH Key 获取</h3>
 
-<p>后来才知道是 OS X 10.11 的 rootless 导致权限无效，所以导致了 Sketch Tool 的安装失败.<br/>
-解决方法就是在终端输入 sudo sh /Applications/Sketch.app/Contents/Resources/sketchtool/install.sh</p>
+<ul>
+<li>登录 <strong>Gitlab</strong> 的官网注册并登录.
+<img src="https://cdn-images-1.medium.com/max/1600/1*1k6qrt0h1qOod48JJVJ9iA.jpeg" alt="Gitlab.com"/></li>
+<li>打开你 Mac 的终端
+<img src="https://cdn-images-1.medium.com/max/1600/1*GfBX3WvlwJPpqOv9Sq4U4A.jpeg" alt="Open your terminal"/></li>
+<li>在终端中输入 
+<code>ssh-keygen -t rsa -C “$your_email”
+</code>
+此处需要在 <em>your_email</em> 处填写你自己邮箱，显示 <em>Enter file in which to save the key</em> 后直接按回车，输入你的密码后，就会显示如下界面:
+<img src="https://cdn-images-1.medium.com/max/1600/1*y2n_lT75kwMGok4VbML9MA.png" alt=""/></li>
+<li>然后在终端中输入 
+<code>pbcopy &lt; ~/.ssh/id_rsa.pub
+</code>
+你的 <em>SSH Key</em> 就已经复制在剪贴板上了，然后打开你刚才登陆的 <strong>Gitlab</strong> ，点击左侧的 <em>Profile Setting - SSH Keys</em>，将你复制的 <em>SSH Key</em> 粘贴进去添加即可.
+<img src="https://cdn-images-1.medium.com/max/1600/1*Un4EAFt2Ip3rIN8kDjG7TA.jpeg" alt="SSH Keys"/></li>
+</ul>
 
-<p>安装完成结果显示如下</p>
+<h3 id="toc_3">4. SketchTool 的安装</h3>
 
-<p>5.项目的建立 &amp; 克隆到本地<br/>
-打开我们登录好的 Gitlab，点击左上角的加号新建一个 Project. Visibility Level 你可以根据你的需要自己选择</p>
+<ul>
+<li>这一步上我卡住了很久，因为我是按照官网的这个方法安装，一直没有安装成功.
+<img src="https://cdn-images-1.medium.com/max/1600/1*rRsiATcS675cC4rG-Q-z0A.jpeg" alt=""/></li>
+<li><p>后来才知道是 OS X 10.11 的 rootless 导致权限无效，所以导致了 Sketch Tool 的安装失败.</p>
 
-<p>Creat a new project<br/>
-点击 Creat project 以后，star 下面的地址选择 SSH 后，在Command line instructions- Creat a new respository 中复制那几行代码.</p>
+<p>解决方法就是在终端输入 <br/>
+<code>sudo sh /Applications/Sketch.app/Contents/Resources/sketchtool/install.sh<br/>
+</code><br/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*kvkLuMjJ_B4rSjLQAmItGw.jpeg" alt=""/><br/>
+安装完成结果显示如下:<br/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*IyPo1bwI_FwIwdYd7L_Mqg.jpeg" alt=""/></p></li>
+</ul>
 
-<p>稍等片刻，处理一段时间后会出现如图情况，按回车后进行本地的 master 和 remote 的 master 主分支的合并即可. 现在就代表本地文件夹和 remote 文件夹已经联系上了.</p>
+<h3 id="toc_4">5. 项目的建立 &amp; 克隆到本地</h3>
 
-<ol>
-<li>最后一步
-将你需要管理的 Sketch 设计稿拷贝到此文件夹里.</li>
-</ol>
+<ul>
+<li>打开我们登录好的 <strong>Gitlab</strong>，点击左上角的加号新建一个 <strong>Project</strong>. <strong>Visibility Level</strong> 你可以根据你的需要自己选择
+<img src="https://cdn-images-1.medium.com/max/1600/1*HBIxIyAGL-P6UBgWRviPng.jpeg" alt="Creat a new project"/></li>
+<li>点击 <em>Creat project</em> 以后，<em>star</em> 下面的地址选择 SSH 后，在 <em>Command line instructions - Creat a new respository</em> 中复制那几行代码.
+<img src="https://cdn-images-1.medium.com/max/1600/1*HBIxIyAGL-P6UBgWRviPng.jpeg" alt=""/></li>
+<li>稍等片刻，处理一段时间后会出现如图情况，按回车后进行本地的 <em>master</em> 和 <em>remote</em> 的 <em>master</em> 主分支的合并即可. 现在就代表本地文件夹和 <em>remote</em> 文件夹已经联系上了.
+<img src="https://cdn-images-1.medium.com/max/1600/1*0weGK8W6S6YOK4N2Ab0SJw.jpeg" alt=""/></li>
+</ul>
 
-<p>这个时候设计稿属于无编制状态，Git系统是不能管理到它的改变的，点击 Plugins - Git - Add File to git</p>
+<h3 id="toc_5">6. 最后一步</h3>
 
-<p>这个时候 Sketch 下方会出现 File added to git 就表示这个文件已经被追踪。</p>
+<ul>
+<li>将你需要管理的 <strong>Sketch</strong> 设计稿拷贝到此文件夹里.
+<img src="https://cdn-images-1.medium.com/max/1600/1*kU4Z3iLjzMbA2TIBEdK4ug.jpeg" alt=""/></li>
+<li>这个时候设计稿属于无编制状态，<strong>Git</strong> 系统是不能管理到它的改变的，点击 <em>Plugins - Git - Add File to git</em>
+<img src="https://cdn-images-1.medium.com/max/1600/1*M1e1zKn_ML0GPyBPgddHcw.jpeg" alt=""/></li>
+<li>这个时候 <strong>Sketch</strong> 下方会出现 <em>File added to git</em> 就表示这个文件已经被追踪。
+<img src="https://cdn-images-1.medium.com/max/1600/1*_NGQH96Rtu-ntkcrR-3usw.jpeg" alt=""/></li>
+<li>现在我来改变一下 HomePage 的背景颜色，然后点击 <em>Plugins - Git - Commit</em>.
+<img src="https://cdn-images-1.medium.com/max/1600/1*eqx2_L4Q57GiAHZKvRLXkg.jpeg" alt=""/></li>
+<li>然后你就可以在弹出的输入框里输入你对本次修改的描述，我输入了“修改了HomePage的背景颜色”，点击 <em>Commit</em>.
+<img src="https://cdn-images-1.medium.com/max/1600/1*v4AuzlvSg08OC8-EOc3UUg.jpeg" alt=""/></li>
+<li>现在的 <em>Commit</em> 完成就相当于生成了一个阶段性的存档，已经可以在本地使用 <strong>Git</strong> 回溯版本或者查看，不过为了团队协作、以及用上 <strong>Gitlab</strong> 系统的简洁的 GUI 操作界面进行对比我们需要将改动推送到远程服务器，所以我们再点击 <em>Plugins - Git - Push</em>
+<img src="https://cdn-images-1.medium.com/max/1600/1*MvvrpZpDq9bd5VUEvNmDXg.jpeg" alt=""/></li>
+<li>当然，我们一样可以多次 <em>Commit</em> 之后再选择 <em>Push</em> 一次性全部上传也是可以的，这个时候你在登录你的 <strong>Gitlab</strong> 查看，就可以查看每一个 <em>Commit</em> 了，我们随意点开一个 <em>Commit</em> ，点开多个版本的对比，就可以查看每个不同的 <em>Artboard</em> 的区别了.
+<img src="https://cdn-images-1.medium.com/max/1600/1*ZuuUNPhRWgV3gC2l9dHBZw.jpeg" alt=""/></li>
+<li>这里需要注意的是，第一次 <em>Commit</em> 因为没有之前的设计稿版本，所以没有对比，在第二次修改上传后，你就可以看见对比了.</li>
+</ul>
 
-<p>现在我来改变一下 HomePage 的背景颜色，然后点击 Plugins - Git - Commit.</p>
+<hr/>
 
-<p>然后你就可以在弹出的输入框里输入你对本次修改的描述，我输入了“修改了HomePage的背景颜色”，点击Commit.</p>
+<p>以上就是这个插件的详细使用方法，希望对你有帮助，这个插件在设计稿的版本管理上真的可以给大家带来极大的方便，也同时方便了团队之间的协作.</p>
 
-<p>现在的 Commit 完成就相当于生成了一个阶段性的存档，已经可以在本地使用 Git 回溯版本或者查看，不过为了团队协作、以及用上 Gitlab 系统的简洁的 GUI 操作界面进行对比我们需要将改动推送到远程服务器，所以我们再点击 Plugins - Git - Push</p>
+<p>希望大家会喜欢！<br/>
+o.o</p>
 
-<p>当然，我们一样可以多次 Commit 之后再选择 Push 一次性全部上传也是可以的，这个时候你在登录你的 Gitlab 查看，就可以查看每一个 Commit 了，我们随意点开一个 Commit ，点开多个版本的对比，就可以查看每个不同的 Artboard 的区别了.</p>
+<p><strong>PS</strong>: 如果你在 <em>Push</em> 的时候出现如下情况<br/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*OtVVX9cFO3I4EBj4NaXtqw.jpeg" alt=""/><br/>
+这个时候直接在终端里输入 <br/>
+<code>git config — global push.default simple<br/>
+</code> 就可以了.</p>
 
-<p>这里需要注意的是，第一次 Commit 因为没有之前的设计稿版本，所以没有对比，在第二次修改上传后，你就可以看见对比了.<br/>
-以上就是这个插件的详细使用方法，希望对你有帮助，这个插件在设计稿的版本管理上真的可以给大家带来极大的方便，也同时方便了团队之间的协作.<br/>
-希望大家会喜欢！<br/>
-o.o<br/>
-PS: 如果你在 Push 的时候出现如下情况</p>
-
-<p>这个时候直接在终端里输入 git config — global push.default simple 就可以了.<br/>
-本文档适用于：Sketch 3.1 以上的版本 ，Sketch Git</p>
+<blockquote>
+<p>本文档适用于：Sketch 3.1 以上的版本 ，Sketch Git</p>
+</blockquote>
 
 
 			
