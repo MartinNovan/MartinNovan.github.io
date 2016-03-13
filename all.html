@@ -158,76 +158,124 @@
 <h3 id="toc_1">2. Sketch Git &amp; Git 的安装</h3>
 
 <ul>
-<li>把前面下载好的 <strong>git-sketch-plugin-master.zip</strong> 的压缩包解压后点击 <strong>Git.sketchplugin</strong> 进行安装.
-<img src="https://cdn-images-1.medium.com/max/1600/1*Zi9KXZgmlvDAmVc8lNMWHQ.jpeg" alt="git-sketch-plugin-master"/></li>
-<li>git-sketch-plugin-master 安装成功后，显示如下：
-<img src="https://cdn-images-1.medium.com/max/1600/1*QsJrH0Tl8jbYItRBQLWwEg.jpeg" alt="Install plugin successfully"/></li>
-<li>点击安装之前下载好的 <strong>git-2.6.4-intel-universal-mavericks.dmg</strong>，等待片刻安装完成.
-<img src="https://cdn-images-1.medium.com/max/1600/1*Rztevepr55putV5Lf5w77w.jpeg" alt="Git install"/></li>
+<li><p>把前面下载好的 <strong>git-sketch-plugin-master.zip</strong> 的压缩包解压后点击 <strong>Git.sketchplugin</strong> 进行安装.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Zi9KXZgmlvDAmVc8lNMWHQ.jpeg" alt="git-sketch-plugin-master"/></p></li>
+<li><p>git-sketch-plugin-master 安装成功后，显示如下：</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*QsJrH0Tl8jbYItRBQLWwEg.jpeg" alt="Install plugin successfully"/></p></li>
+<li><p>点击安装之前下载好的 <strong>git-2.6.4-intel-universal-mavericks.dmg</strong>，等待片刻安装完成.</p></li>
 </ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Rztevepr55putV5Lf5w77w.jpeg" alt="Git install"/></p>
 
 <h3 id="toc_2">3. Gitlab 注册 &amp; SSH Key 获取</h3>
 
 <ul>
-<li>登录 <strong>Gitlab</strong> 的官网注册并登录.
-<img src="https://cdn-images-1.medium.com/max/1600/1*1k6qrt0h1qOod48JJVJ9iA.jpeg" alt="Gitlab.com"/></li>
-<li>打开你 Mac 的终端
-<img src="https://cdn-images-1.medium.com/max/1600/1*GfBX3WvlwJPpqOv9Sq4U4A.jpeg" alt="Open your terminal"/></li>
-<li>在终端中输入 
-<code>ssh-keygen -t rsa -C “$your_email”
-</code>
-此处需要在 <em>your_email</em> 处填写你自己邮箱，显示 <em>Enter file in which to save the key</em> 后直接按回车，输入你的密码后，就会显示如下界面:
-<img src="https://cdn-images-1.medium.com/max/1600/1*y2n_lT75kwMGok4VbML9MA.png" alt=""/></li>
-<li>然后在终端中输入 
-<code>pbcopy &lt; ~/.ssh/id_rsa.pub
-</code>
-你的 <em>SSH Key</em> 就已经复制在剪贴板上了，然后打开你刚才登陆的 <strong>Gitlab</strong> ，点击左侧的 <em>Profile Setting - SSH Keys</em>，将你复制的 <em>SSH Key</em> 粘贴进去添加即可.
-<img src="https://cdn-images-1.medium.com/max/1600/1*Un4EAFt2Ip3rIN8kDjG7TA.jpeg" alt="SSH Keys"/></li>
+<li>登录 <strong>Gitlab</strong> 的官网注册并登录.</li>
 </ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*1k6qrt0h1qOod48JJVJ9iA.jpeg" alt="Gitlab.com"/></p>
+
+<ul>
+<li>打开你 Mac 的终端</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*GfBX3WvlwJPpqOv9Sq4U4A.jpeg" alt="Open your terminal"/></p>
+
+<ul>
+<li>在终端中输入 <code>ssh-keygen -t rsa -C “$your_email”
+</code>
+此处需要在 <em>your_email</em> 处填写你自己邮箱，显示 <em>Enter file in which to save the key</em> 后直接按回车，输入你的密码后，就会显示如下界面:</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*y2n_lT75kwMGok4VbML9MA.png" alt=""/></p>
+
+<ul>
+<li>然后在终端中输入 <code>pbcopy &lt; ~/.ssh/id_rsa.pub
+</code>
+你的 <em>SSH Key</em> 就已经复制在剪贴板上了，然后打开你刚才登陆的 <strong>Gitlab</strong> ，点击左侧的 <em>Profile Setting - SSH Keys</em>，将你复制的 <em>SSH Key</em> 粘贴进去添加即可.</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Un4EAFt2Ip3rIN8kDjG7TA.jpeg" alt="SSH Keys"/></p>
 
 <h3 id="toc_3">4. SketchTool 的安装</h3>
 
 <ul>
-<li>这一步上我卡住了很久，因为我是按照官网的这个方法安装，一直没有安装成功.
-<img src="https://cdn-images-1.medium.com/max/1600/1*rRsiATcS675cC4rG-Q-z0A.jpeg" alt=""/></li>
+<li><p>这一步上我卡住了很久，因为我是按照官网的这个方法安装，一直没有安装成功.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*rRsiATcS675cC4rG-Q-z0A.jpeg" alt=""/></p></li>
 <li><p>后来才知道是 OS X 10.11 的 rootless 导致权限无效，所以导致了 Sketch Tool 的安装失败.</p>
 
-<p>解决方法就是在终端输入 <br/>
-<code>sudo sh /Applications/Sketch.app/Contents/Resources/sketchtool/install.sh<br/>
-</code><br/>
-<img src="https://cdn-images-1.medium.com/max/1600/1*kvkLuMjJ_B4rSjLQAmItGw.jpeg" alt=""/><br/>
-安装完成结果显示如下:<br/>
-<img src="https://cdn-images-1.medium.com/max/1600/1*IyPo1bwI_FwIwdYd7L_Mqg.jpeg" alt=""/></p></li>
+<p>解决方法就是在终端输入 <code>sudo sh /Applications/Sketch.app/Contents/Resources/sketchtool/install.sh<br/>
+</code></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*kvkLuMjJ_B4rSjLQAmItGw.jpeg" alt=""/></p>
+
+<p>安装完成结果显示如下:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*IyPo1bwI_FwIwdYd7L_Mqg.jpeg" alt=""/></p></li>
 </ul>
 
 <h3 id="toc_4">5. 项目的建立 &amp; 克隆到本地</h3>
 
 <ul>
-<li>打开我们登录好的 <strong>Gitlab</strong>，点击左上角的加号新建一个 <strong>Project</strong>. <strong>Visibility Level</strong> 你可以根据你的需要自己选择
-<img src="https://cdn-images-1.medium.com/max/1600/1*HBIxIyAGL-P6UBgWRviPng.jpeg" alt="Creat a new project"/></li>
-<li>点击 <em>Creat project</em> 以后，<em>star</em> 下面的地址选择 SSH 后，在 <em>Command line instructions - Creat a new respository</em> 中复制那几行代码.
-<img src="https://cdn-images-1.medium.com/max/1600/1*HBIxIyAGL-P6UBgWRviPng.jpeg" alt=""/></li>
-<li>稍等片刻，处理一段时间后会出现如图情况，按回车后进行本地的 <em>master</em> 和 <em>remote</em> 的 <em>master</em> 主分支的合并即可. 现在就代表本地文件夹和 <em>remote</em> 文件夹已经联系上了.
-<img src="https://cdn-images-1.medium.com/max/1600/1*0weGK8W6S6YOK4N2Ab0SJw.jpeg" alt=""/></li>
+<li><p>打开我们登录好的 <strong>Gitlab</strong>，点击左上角的加号新建一个 <strong>Project</strong>. <strong>Visibility Level</strong> 你可以根据你的需要自己选择</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*HBIxIyAGL-P6UBgWRviPng.jpeg" alt="Creat a new project"/></p></li>
+<li><p>点击 <em>Creat project</em> 以后，<em>star</em> 下面的地址选择 SSH 后，在 <em>Command line instructions - Creat a new respository</em> 中复制那几行代码.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*HBIxIyAGL-P6UBgWRviPng.jpeg" alt=""/></p></li>
+<li><p>稍等片刻，处理一段时间后会出现如图情况，按回车后进行本地的 <em>master</em> 和 <em>remote</em> 的 <em>master</em> 主分支的合并即可. 现在就代表本地文件夹和 <em>remote</em> 文件夹已经联系上了.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*0weGK8W6S6YOK4N2Ab0SJw.jpeg" alt=""/></p></li>
 </ul>
 
 <h3 id="toc_5">6. 最后一步</h3>
 
 <ul>
-<li>将你需要管理的 <strong>Sketch</strong> 设计稿拷贝到此文件夹里.
-<img src="https://cdn-images-1.medium.com/max/1600/1*kU4Z3iLjzMbA2TIBEdK4ug.jpeg" alt=""/></li>
-<li>这个时候设计稿属于无编制状态，<strong>Git</strong> 系统是不能管理到它的改变的，点击 <em>Plugins - Git - Add File to git</em>
-<img src="https://cdn-images-1.medium.com/max/1600/1*M1e1zKn_ML0GPyBPgddHcw.jpeg" alt=""/></li>
-<li>这个时候 <strong>Sketch</strong> 下方会出现 <em>File added to git</em> 就表示这个文件已经被追踪。
-<img src="https://cdn-images-1.medium.com/max/1600/1*_NGQH96Rtu-ntkcrR-3usw.jpeg" alt=""/></li>
-<li>现在我来改变一下 HomePage 的背景颜色，然后点击 <em>Plugins - Git - Commit</em>.
-<img src="https://cdn-images-1.medium.com/max/1600/1*eqx2_L4Q57GiAHZKvRLXkg.jpeg" alt=""/></li>
-<li>然后你就可以在弹出的输入框里输入你对本次修改的描述，我输入了“修改了HomePage的背景颜色”，点击 <em>Commit</em>.
-<img src="https://cdn-images-1.medium.com/max/1600/1*v4AuzlvSg08OC8-EOc3UUg.jpeg" alt=""/></li>
-<li>现在的 <em>Commit</em> 完成就相当于生成了一个阶段性的存档，已经可以在本地使用 <strong>Git</strong> 回溯版本或者查看，不过为了团队协作、以及用上 <strong>Gitlab</strong> 系统的简洁的 GUI 操作界面进行对比我们需要将改动推送到远程服务器，所以我们再点击 <em>Plugins - Git - Push</em>
-<img src="https://cdn-images-1.medium.com/max/1600/1*MvvrpZpDq9bd5VUEvNmDXg.jpeg" alt=""/></li>
-<li>当然，我们一样可以多次 <em>Commit</em> 之后再选择 <em>Push</em> 一次性全部上传也是可以的，这个时候你在登录你的 <strong>Gitlab</strong> 查看，就可以查看每一个 <em>Commit</em> 了，我们随意点开一个 <em>Commit</em> ，点开多个版本的对比，就可以查看每个不同的 <em>Artboard</em> 的区别了.
-<img src="https://cdn-images-1.medium.com/max/1600/1*ZuuUNPhRWgV3gC2l9dHBZw.jpeg" alt=""/></li>
+<li>将你需要管理的 <strong>Sketch</strong> 设计稿拷贝到此文件夹里.</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*kU4Z3iLjzMbA2TIBEdK4ug.jpeg" alt=""/></p>
+
+<ul>
+<li>这个时候设计稿属于无编制状态，<strong>Git</strong> 系统是不能管理到它的改变的，点击 <em>Plugins - Git - Add File to git</em><br/></li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*M1e1zKn_ML0GPyBPgddHcw.jpeg" alt=""/>  </p>
+
+<ul>
+<li>这个时候 <strong>Sketch</strong> 下方会出现 <em>File added to git</em> 就表示这个文件已经被追踪.<br/></li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*_NGQH96Rtu-ntkcrR-3usw.jpeg" alt=""/>        </p>
+
+<ul>
+<li>现在我来改变一下 HomePage 的背景颜色，然后点击 <em>Plugins - Git - Commit</em>.<br/></li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*eqx2_L4Q57GiAHZKvRLXkg.jpeg" alt=""/></p>
+
+<ul>
+<li>然后你就可以在弹出的输入框里输入你对本次修改的描述，我输入了“修改了HomePage的背景颜色”，点击 <em>Commit</em>.</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*v4AuzlvSg08OC8-EOc3UUg.jpeg" alt=""/></p>
+
+<ul>
+<li>现在的 <em>Commit</em> 完成就相当于生成了一个阶段性的存档，已经可以在本地使用 <strong>Git</strong> 回溯版本或者查看，不过为了团队协作、以及用上 <strong>Gitlab</strong> 系统的简洁的 GUI 操作界面进行对比我们需要将改动推送到远程服务器，所以我们再点击 <em>Plugins - Git - Push</em><br/></li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*MvvrpZpDq9bd5VUEvNmDXg.jpeg" alt=""/></p>
+
+<ul>
+<li>当然，我们一样可以多次 <em>Commit</em> 之后再选择 <em>Push</em> 一次性全部上传也是可以的，这个时候你在登录你的 <strong>Gitlab</strong> 查看，就可以查看每一个 <em>Commit</em> 了，我们随意点开一个 <em>Commit</em> ，点开多个版本的对比，就可以查看每个不同的 <em>Artboard</em> 的区别了.</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*ZuuUNPhRWgV3gC2l9dHBZw.jpeg" alt=""/></p>
+
+<ul>
 <li>这里需要注意的是，第一次 <em>Commit</em> 因为没有之前的设计稿版本，所以没有对比，在第二次修改上传后，你就可以看见对比了.</li>
 </ul>
 
@@ -238,10 +286,11 @@
 <p>希望大家会喜欢！<br/>
 o.o</p>
 
-<p><strong>PS</strong>: 如果你在 <em>Push</em> 的时候出现如下情况<br/>
-<img src="https://cdn-images-1.medium.com/max/1600/1*OtVVX9cFO3I4EBj4NaXtqw.jpeg" alt=""/><br/>
-这个时候直接在终端里输入 <br/>
-<code>git config — global push.default simple<br/>
+<p><strong>PS</strong>: 如果你在 <em>Push</em> 的时候出现如下情况     </p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*OtVVX9cFO3I4EBj4NaXtqw.jpeg" alt=""/></p>
+
+<p>这个时候直接在终端里输入 <code>git config — global push.default simple<br/>
 </code> 就可以了.</p>
 
 <blockquote>
